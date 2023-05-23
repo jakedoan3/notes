@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import uuid from 'react-uuid'
 import './App.css';
-import Sidebar from './Sidebar';
-import Main from './Main';
+import Sidebar from './components/Sidebar';
+import Main from './components/Main';
+import { Container } from 'react-bootstrap';
+import Login from './components/Login';
+import Signup from './components/Signup';
+import AuthDetails from './components/AuthDetails';
+
 
 function App() {
 
-  //last updated May 22, 2023
+  //last updated May 23, 2023
 
   //TO DO:
-  //add auth (login/logout/register components)
+  //load different pages depending on logged in
   //render stored notes from API
   //add more sort options
   //make notes shareable?
@@ -51,7 +56,23 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar 
+      <div>
+        <Container 
+        className='d-flex align-items-center justify-content-center'
+        style={{ minHeight: '100vh'}}
+        >
+          <div className='w-100' style={{maxWidth: '400px'}}>
+            {/* <Login />
+            <Signup /> */}
+            <AuthDetails />
+          </div>
+          
+        </Container>
+      </div>
+      
+      {/* notes components after successful login */}
+      
+      {/* <Sidebar 
       notes={notes} 
       onAddNote={onAddNote} 
       onDeleteNote={onDeleteNote}
@@ -61,7 +82,7 @@ function App() {
       <Main 
       activeNote={getActiveNote()} 
       onUpdateNote={onUpdateNote}
-      />
+      /> */}
       
     </div>
   );
