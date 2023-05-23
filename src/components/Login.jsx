@@ -5,6 +5,7 @@ import { auth } from '../firebase'
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -14,13 +15,15 @@ const Login = () => {
         })
         .catch((error) => {
             console.log(error)
+            setError("Username or Password was incorrect")
+            
         })
     }
   return (
     
     <div className='login-container'>
             <form onSubmit={handleLogin}>
-                {/* {error ? <p>Username or Password was incorrect</p>: null} */}
+                {error ? <p className='error'>Username or Password was incorrect</p>: null}
                 <h1>Log In</h1>
                 <input
                     type="email"

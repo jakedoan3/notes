@@ -1,12 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { auth } from '../firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
-// import { Form, Button, Card, Alert } from 'react-bootstrap'
+
 
 const Signup = () => {
-    // const emailRef = useRef()
-    // const passwordRef = useRef()
-    // const passwordConfirmRef = useRef()
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [passwordConfirm, setPasswordConfirm] = useState('')
@@ -29,31 +26,10 @@ const Signup = () => {
     }
   return (
     <>
-        {/* <Card>
-            <Card.Body>
-                <h2 className='text-center mb-4'>Sign Up</h2>
-                
-                <Form >
-                    <Form.Group id='email'>
-                        <Form.Label>Email</Form.Label>
-                        <Form.Control type="email" ref={emailRef} required></Form.Control>
-                    </Form.Group>
-                    <Form.Group id='password'>
-                        <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" ref={passwordRef} required></Form.Control>
-                    </Form.Group>
-                    <Form.Group id='password-confirm'>
-                        <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="password" ref={passwordConfirmRef} required></Form.Control>
-                    </Form.Group>
-                    <Button disabled={loading} className='w-100' type="submit"> Sign Up</Button>
-                </Form>
-            </Card.Body>
-        </Card> */}
 
         <div className='sign-up-container'>
             <form onSubmit={handleSignUp}>
-                {error ? <p>Passwords do not match</p>: null}
+                {error ? <p className='error'>Passwords do not match</p>: null}
                 <h1>Create Account</h1>
                 <input
                     type="email"

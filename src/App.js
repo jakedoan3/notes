@@ -15,7 +15,8 @@ function App() {
 
   //TO DO:
   //load different pages depending on logged in
-  //render stored notes from API
+    //move AuthDetails into App?
+  //add, edit, view, delete notes live with DB
   //add more sort options
   //make notes shareable?
     //read-only for now, then collaborative?
