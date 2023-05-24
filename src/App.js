@@ -1,23 +1,18 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import { onAuthStateChanged } from "firebase/auth";
-// import { Container } from 'react-bootstrap';
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import { auth } from "./firebase";
 import PrivateRoutes from "./utils/PrivateRoutes";
-// import PrivateRoutes from './utils/PrivateRoutes';
 
 //last updated May 24, 2023
 
 //TO DO:
-//load different pages depending on logged in
-//navigate to login upon successful logout
-//navigate to home upon successful login
-//clean up CSS
 //add, edit, view, delete notes live with DB
+  //save updates manually at first, then find away to save automatically? (i.e. Google Docs)
 //add more sort options
 //make notes shareable?
 //read-only for now, then collaborative?
