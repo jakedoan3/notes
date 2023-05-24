@@ -4,7 +4,6 @@ import { onAuthStateChanged, signOut } from 'firebase/auth'
 import { Container } from 'react-bootstrap';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import AuthDetails from './components/AuthDetails';
 import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import { auth } from './firebase';
@@ -35,7 +34,8 @@ const logOut = () => {
 
   //TO DO:
   //load different pages depending on logged in
-    //move AuthDetails into App?
+    //navigate to login upon successful logout
+    //navigate to home upon successful login
   //clean up CSS
   //add, edit, view, delete notes live with DB
   //add more sort options
