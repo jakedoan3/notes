@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../firebase'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
     const [email, setEmail] = useState('')
@@ -12,6 +13,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) =>{
             console.log(userCredential);
+            
         })
         .catch((error) => {
             console.log(error)
@@ -40,7 +42,8 @@ const Login = () => {
                 <button type='submit'>Log In</button>
             </form>
             <div className='w-100 text-center mt-2'>
-            Don't have an account? Sign Up
+            Don't have an account? 
+            <Link to="/signup">Sign Up</Link>
         </div>
         </div>
   )

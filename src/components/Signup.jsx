@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { auth } from '../firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { Link } from 'react-router-dom'
 
 
 const Signup = () => {
@@ -53,7 +54,8 @@ const Signup = () => {
             </form>
         </div>
         <div className='w-100 text-center mt-2'>
-            Already have an account? Login
+            Already have an account? 
+            <Link to="/login">Login</Link>
         </div>
     </>
   )
