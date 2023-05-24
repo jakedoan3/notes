@@ -8,9 +8,23 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import { auth } from './firebase';
 
+  //last updated May 24, 2023
+
+  //TO DO:
+  //load different pages depending on logged in
+    //navigate to login upon successful logout
+    //navigate to home upon successful login
+  //clean up CSS
+  //add, edit, view, delete notes live with DB
+  //add more sort options
+  //make notes shareable?
+    //read-only for now, then collaborative?
+  //enable user to bold/italicize/underline/strikethrough text
+  //enable bullets for lists?
+
+
 function App() {
   const [authUser, setAuthUser] = useState(null)
-
 
   useEffect(() => {
     const listen = onAuthStateChanged(auth, (user) => {
@@ -28,22 +42,9 @@ function App() {
 const logOut = () => {
     signOut(auth).then (() => {
         console.log("Successfully logged out")
+        //navigate to login route
     }).catch(error => console.log(error))
 }
-  //last updated May 24, 2023
-
-  //TO DO:
-  //load different pages depending on logged in
-    //navigate to login upon successful logout
-    //navigate to home upon successful login
-  //clean up CSS
-  //add, edit, view, delete notes live with DB
-  //add more sort options
-  //make notes shareable?
-    //read-only for now, then collaborative?
-  //enable user to bold/italicize/underline/strikethrough text
-  //enable bullets for lists?
-
 
   return (
     <div className="App">
