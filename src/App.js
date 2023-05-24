@@ -11,7 +11,7 @@ import AuthDetails from './components/AuthDetails';
 
 function App() {
 
-  //last updated May 23, 2023
+  //last updated May 24, 2023
 
   //TO DO:
   //load different pages depending on logged in
