@@ -11,6 +11,9 @@ import PrivateRoutes from "./utils/PrivateRoutes";
 //last updated May 24, 2023
 
 //TO DO:
+//keep authenticated users logged in with cookies
+  //universal-cookie (ref chat project)
+
 //add, edit, view, delete notes live with DB
   //save updates manually at first, then find away to save automatically? (i.e. Google Docs)
 //add more sort options
