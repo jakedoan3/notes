@@ -8,11 +8,12 @@ import Home from "./components/Home";
 import { auth } from "./firebase";
 import PrivateRoutes from "./utils/PrivateRoutes";
 
-//last updated May 31, 2023
+//last updated June 1, 2023
 
 //TO DO:
-//keep authenticated users logged in with cookies
-  //universal-cookie (ref chat project)
+//keep authenticated users logged in with cookies/auth context
+  //universal-cookie
+  //auth context (ref chat project)
 
 //add, edit, view, delete notes live with DB
   //save updates manually at first, then find away to save automatically? (i.e. Google Docs)
