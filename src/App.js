@@ -8,7 +8,7 @@ import Home from "./components/Home";
 import { auth } from "./firebase";
 import PrivateRoutes from "./utils/PrivateRoutes";
 
-//last updated June 26, 2023
+//last updated June 27, 2023
 
 //TO DO:
 //keep authenticated users logged in with cookies/auth context
